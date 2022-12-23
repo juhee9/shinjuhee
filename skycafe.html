@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하늘, 구름 눈</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background: url(./images/sky_back.png) no-repeat center;
+        }
+
+        .wall {
+            width: 800px;
+            margin: 0 auto;
+            margin-top: 150px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+        }
+
+
+        /*swiper 화살표, 페이지네이션 색상 변경하기*/
+        .wall .swiper-button-next,
+        .wall .swiper-button-prev {
+            color: #79a2c4;
+            /*화살표는 글자로 들어간 것이므로, 글씨색상을 바꿔주면 화살표의 색상에 변동이 있습니다.*/
+        }
+
+
+        .wall .swiper-pagination span {
+            background-color: #e2f2ff;
+        }
+
+        /*페이지네이션의 동그라미 색상은 페이지네이션 클래스 안의 span 태그에 들어가 있으므로,
+반드시 그 안의 스팬태그에게 스타일을 준다.*/
+        .home {
+            position: fixed;
+            bottom: 50px;
+            right: 120px;
+            width: 40px;
+        }
+
+        .swiper-pagination {
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper wall">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./images/p1.jpg" alt="1"></div>
+            <div class="swiper-slide"><img src="./images/p2.jpg" alt="2"></div>
+            <div class="swiper-slide"><img src="./images/p3.jpg" alt="3"></div>
+            <div class="swiper-slide"><img src="./images/p4.jpg" alt="4"></div>
+            <div class="swiper-slide"><img src="./images/p5.jpg" alt="5"></div>
+            <div class="swiper-slide"><img src="./images/p6.jpg" alt="6"></div>
+            <div class="swiper-slide"><img src="./images/p7.jpg" alt="7"></div>
+            <div class="swiper-slide"><img src="./images/p8.jpg" alt="8"></div>
+            <div class="swiper-slide"><img src="./images/p9.jpg" alt="9"></div>
+            <div class="swiper-slide"><img src="./images/p10.jpg" alt="10"></div>
+            <div class="swiper-slide"><img src="./images/p11.jpg" alt="11"></div>
+            <div class="swiper-slide"><img src="./images/p12.jpg" alt="12"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="home">
+        <a href="./index.html#fh5co-work"><img src="./images/home.png" alt="home"></a>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".wall", {
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            mousewheel: true,
+            keyboard: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>
