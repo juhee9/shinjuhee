@@ -1559,6 +1559,7 @@ input[type="text"] {
 
 
 .main_inner {
+  width: 187px;
   position: absolute;
   bottom: 50px;
   left: 50%;
@@ -1576,4 +1577,8 @@ input[type="text"] {
   right: 50px;
   display: none;
   z-index: 50;
+}
+
+.txt {
+  font-size: 14.5px;
 }
